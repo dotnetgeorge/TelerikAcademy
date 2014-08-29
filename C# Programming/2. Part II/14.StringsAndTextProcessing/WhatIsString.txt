@@ -1,0 +1,23 @@
+A string is a sequential collection of Unicode characters that is used to represent text.
+A String object is a sequential collection of System.Char objects that represent a string. 
+The value of the String object is the content of the sequential collection, 
+and that value is immutable (that is, it is read-only). 
+For more information about the immutability of strings, 
+see the Immutability and the StringBuilder class section later in this topic.
+The maximum size of a String object in memory is 2 GB, or about 1 billion characters.
+ 
+The string type represents a sequence of zero or more Unicode characters. 
+string is an alias for String in the .NET Framework.
+Although string is a reference type, the equality operators (== and !=) are defined 
+to compare the values of string objects, not references.
+This makes testing for string equality more intuitive.
+ 
+Compare(str1, str2) - Compares two specified String objects and returns an integer that indicates their relative position in the sort order.
+IndexOf(str) - Reports the zero-based index of the first occurrence of a specified Unicode character or string within this instance. The method returns -1 if the character or string is not found in this instance. 
+LastIndexOf(str) -  Reports the zero-based index position of the last occurrence of a specified Unicode character or string within this instance. The method returns -1 if the character or string is not found in this instance.
+Substring(startIndex, length) - Retrieves a substring from this instance. 
+Replace(oldStr, newStr) - Returns a new string in which all occurrences of a specified Unicode character or String in the current string are replaced with another specified Unicode character or String.
+Remove(startIndex, length) - Returns a new string in which a specified number of characters in the current instance beginning at a specified position have been deleted.
+ToLower() - Returns a copy of this string converted to lowercase.
+ToUpper() -  Returns a copy of this string converted to uppercase.
+Trim() - Returns a new string in which all leading and trailing occurrences of a set of specified characters from the current String object are removed.

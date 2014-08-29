@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="SchoolProgram.Data.Class" Collapsed="true">
+    <Position X="0.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAEAAACAAAAAAAAAABAAAIAQAACAAA=</HashCode>
+      <FileName>Data\Class.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SchoolProgram.Data.Discipline" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAJAEAIAAAACAAAAEAAAAABAAAAAAAAA=</HashCode>
+      <FileName>Data\Discipline.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SchoolProgram.Data.School" Collapsed="true">
+    <Position X="0.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAEAACANAABAAAAAAABAAAAEAAAAAEAAAAA=</HashCode>
+      <FileName>Data\School.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SchoolProgram.Data.Student" Collapsed="true">
+    <Position X="0.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAEAAAAAAAAAIAEAACAAAAAAAAAAAA=</HashCode>
+      <FileName>Data\Student.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SchoolProgram.Data.Teacher" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAABAEUAAgAECAAAAEAAAAAAAEAAABAAA=</HashCode>
+      <FileName>Data\Teacher.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SchoolProgram.Program" Collapsed="true">
+    <Position X="3" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAEAAAAAAAAAAACAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
