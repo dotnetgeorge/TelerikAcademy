@@ -35,7 +35,7 @@ namespace MaximumSum3x3
             {
                 for (int col = 0; col < cols - 2; col++)
                 {
-                    int sum = matrix[row, col] + matrix[row, col + 1] + matrix[row + 1, col] + matrix[row + 1, col + 1] + matrix[row + 2,col] + matrix[row + 2, col + 1] + matrix[row + 2, col + 2];
+                    int sum = matrix[row, col] + matrix[row, col + 1] + matrix[row + 1, col] + matrix[row + 1, col + 1] + matrix[row + 2, col] + matrix[row, col + 2] + matrix[row + 1, col + 2] + matrix[row + 2, col + 1] + matrix[row + 2, col + 2];
                     if (bestSum < sum)
                     {
                         bestSum = sum;
