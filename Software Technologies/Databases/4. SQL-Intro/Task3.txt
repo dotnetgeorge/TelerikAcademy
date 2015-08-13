@@ -1,0 +1,7 @@
+Start SQL Management Studio and connect to the database TelerikAcademy. 
+Examine the major tables in the "TelerikAcademy" database.
+	The major tables in DB "TelerikAcademy" are Employees, Departments, Addresses.
+		Employees contains full information about every employee like first name, last name, salary, hire date and etc.
+		Departments contains names of different departments in the company.
+		Towns contains names of towns where departments are and where different employee works.
+		

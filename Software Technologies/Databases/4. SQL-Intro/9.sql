@@ -1,0 +1,1 @@
+SELECT DISTINCT Employees.Salary FROM Employees

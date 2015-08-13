@@ -1,0 +1,37 @@
+USE Northwind
+GO
+
+CREATE TABLE Persons (
+	ID INT IDENTITY(1,1) PRIMARY KEY,
+	FirstName NVARCHAR(50) NOT NULL,
+	LastName NVARCHAR(50) NOT NULL,
+	SSN NVARCHAR(50) NOT NULL
+)
+
+CREATE TABLE Accounts (
+	ID INT IDENTITY(1,1) PRIMARY KEY,
+	PersonID INT NOT NULL FOREIGN KEY REFERENCES Persons(ID),
+	Balance MONEY NOT NULL
+)
+
+GO
+
+INSERT INTO Persons VALUES('Jack', 'Boudreau', '203-54-4567')
+INSERT INTO Persons VALUES('Leeann', 'Turner', '620-60-3214')
+INSERT INTO Persons VALUES('Vicky', 'White', '501-26-9876')
+
+INSERT INTO Accounts VALUES(1, 3000)
+INSERT INTO Accounts VALUES(2, 5000)
+INSERT INTO Accounts VALUES(3, 4000)
+
+GO
+
+CREATE PROC ups_PersonsFullName
+AS
+	SELECT FirstName + ' ' + LastName AS [Full Name]
+	FROM Persons
+	GROUP BY FirstName, LastName
+
+GO 
+
+EXEC ups_PersonsFullName

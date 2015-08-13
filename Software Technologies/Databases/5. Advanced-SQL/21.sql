@@ -1,0 +1,1 @@
+DELETE FROM Users WHERE Username = 'old_test'

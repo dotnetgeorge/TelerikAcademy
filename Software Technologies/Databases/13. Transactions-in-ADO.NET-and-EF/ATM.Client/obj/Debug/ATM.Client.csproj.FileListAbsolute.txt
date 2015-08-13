@@ -1,0 +1,12 @@
+c:\users\george\documents\visual studio 2013\Projects\TransactionsInADO.NET\ATM.Client\bin\Debug\ATM.Client.exe.config
+c:\users\george\documents\visual studio 2013\Projects\TransactionsInADO.NET\ATM.Client\bin\Debug\ATM.Client.exe
+c:\users\george\documents\visual studio 2013\Projects\TransactionsInADO.NET\ATM.Client\bin\Debug\ATM.Client.pdb
+c:\users\george\documents\visual studio 2013\Projects\TransactionsInADO.NET\ATM.Client\bin\Debug\ATM.Data.dll
+c:\users\george\documents\visual studio 2013\Projects\TransactionsInADO.NET\ATM.Client\bin\Debug\EntityFramework.dll
+c:\users\george\documents\visual studio 2013\Projects\TransactionsInADO.NET\ATM.Client\bin\Debug\EntityFramework.SqlServer.dll
+c:\users\george\documents\visual studio 2013\Projects\TransactionsInADO.NET\ATM.Client\bin\Debug\ATM.Data.pdb
+c:\users\george\documents\visual studio 2013\Projects\TransactionsInADO.NET\ATM.Client\bin\Debug\EntityFramework.xml
+c:\users\george\documents\visual studio 2013\Projects\TransactionsInADO.NET\ATM.Client\bin\Debug\EntityFramework.SqlServer.xml
+c:\users\george\documents\visual studio 2013\Projects\TransactionsInADO.NET\ATM.Client\obj\Debug\ATM.Client.csprojResolveAssemblyReference.cache
+c:\users\george\documents\visual studio 2013\Projects\TransactionsInADO.NET\ATM.Client\obj\Debug\ATM.Client.exe
+c:\users\george\documents\visual studio 2013\Projects\TransactionsInADO.NET\ATM.Client\obj\Debug\ATM.Client.pdb

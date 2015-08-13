@@ -1,0 +1,84 @@
+1.What database models do you know?
+	Hierarchical database model
+	Network model
+	Relational model
+	Object model
+	Document model
+	
+2. Which are the main functions performed by a Relational Database Management System (RDBMS).
+	Creating 
+	altering 
+	deleting tables and relationships between them (database schema)
+	
+3.Define what is "table" in database terms.
+	A table is a collection of related data held in a structured format within a database. It consists of fields (columns), and rows.
+
+4.Explain the difference between a primary and a foreign key.
+	Primary key is a column of the table that uniquely identifies its rows (usually its is a number)
+	The foreign key is an identifier of a record located in another table (usually its primary key)
+
+5.Explain the different kinds of relationships between tables in relational databases.
+	A one-to-many relationship is the most common type of relationship. 
+		In this type of relationship, a row in table A can have many matching rows in table B, 
+		but a row in table B can have only one matching row in table A
+	In a many-to-many relationship, a row in table A can have many matching rows in table B, and the other way around. 
+		You create such a relationship by defining a third table, called a junction table, 
+		whose primary key consists of the foreign keys from both table A and table B. 
+	In a one-to-one relationship, a row in table A can have no more than one matching row in table B, and the other way around.
+	A one-to-one relationship is created if both of the related columns are primary keys or have unique constraints.
+
+6.When is a certain database schema normalized? What are the advantages of normalized databases?
+	Database normalization is the process of organizing the fields and tables of a relational database to minimize redundancy. 
+	Normalization usually involves dividing large tables into smaller (and less redundant) tables and defining relationships between them. 
+	The objective is to isolate data so that additions, deletions, and modifications of a field can be made in just one table 
+	and then propagated through the rest of the database using the defined relationships.
+
+7.What are database integrity constraints and when are they used?
+	Data integrity contains guidelines for data retention, specifying or guaranteeing the length of time of data can be retained in a particular database. 
+		It specifies what can be done with data values when its validity or usefulness expires.
+	
+    stability (one centralized system performs all data integrity operations)
+    performance (all data integrity operations are performed in the same tier as the consistency model)
+    re-usability (all applications benefit from a single centralized data integrity system)
+    maintainability (one centralized system for all data integrity administration).
+
+8.Point out the pros and cons of using indexes in a database.
+
+
+9.What's the main purpose of the SQL language?
+
+
+10.What are transactions used for? Give an example.
+	A transaction comprises a unit of work performed within a database management system (or similar system) against a database, 
+		and treated in a coherent and reliable way independent of other transactions. 
+		Transactions in a database environment have two main purposes:
+
+    To provide reliable units of work that allow correct recovery from failures
+		and keep a database consistent even in cases of system failure, when execution stops (completely or partially)
+		and many operations upon a database remain uncompleted, with unclear status.
+    To provide isolation between programs accessing a database concurrently.
+		If this isolation is not provided, the program's outcome are possibly erroneous.
+
+	
+	Examples from double-entry accounting systems often illustrate the concept of transactions. 
+	In double-entry accounting every debit requires the recording of an associated credit. 
+	If one writes a check for $100 to buy groceries, a transactional double-entry accounting system 
+	must record the following two entries to cover the single transaction:
+
+    Debit $100 to Groceries Expense Account
+    Credit $100 to Checking Account
+
+
+11.What is a NoSQL database?
+	A NoSQL or Not Only SQL database provides a mechanism for storage and retrieval of data that is modeled 
+	in means other than the tabular relations used in relational databases.
+	Motivations for this approach include simplicity of design, horizontal scaling and finer control over availability.
+	The data structure (e.g. key-value, graph, or document) differs from the RDBMS, 
+	and therefore some operations are faster in NoSQL and some in RDBMS. 
+	There are differences though, and the particular suitability of a given NoSQL DB
+	depends on the problem it must solve (e.g., does the solution use graph algorithms?).
+
+12.Explain the classical non-relational data models.
+	
+
+13.Give few examples of NoSQL databases and their pros and cons.
