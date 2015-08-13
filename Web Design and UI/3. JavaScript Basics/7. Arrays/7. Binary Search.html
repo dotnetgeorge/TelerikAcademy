@@ -1,0 +1,44 @@
+<!-- 
+Write a program that finds the index of given element in a sorted array of integers by using the binary search algorithm (find it in Wikipedia).
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Binary Search</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var length = parseInt(prompt("Enter length of array:"));
+			var array = new Array(length);
+
+			for(var i = 0; i < length; i++) {
+				array[i] = parseInt(prompt("Enter number:"));
+			}
+
+			var key = parseInt(prompt("Key:"));
+
+			var result = BinarySearch(array, key);
+			document.writeln(result);
+
+
+
+			function BinarySearch(array, key) {
+				var min = array[0];
+				var max = array[array.length - 1];
+				var mid = array.length / 2;
+
+				while(max >= min) {
+					if(array[mid] == key) {
+						return mid;
+					} else if(array[mid] < key) {
+						min = mid + 1;
+					} else {
+						max = mid - 1;
+					}
+				}
+
+				return Number.MIN_VALUE:
+			}
+		</script>
+	</body>
+</html>

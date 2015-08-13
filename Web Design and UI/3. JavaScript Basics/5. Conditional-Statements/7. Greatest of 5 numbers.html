@@ -1,0 +1,50 @@
+<!--
+Write a script that finds the greatest of given 5 variables. 
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Greatest of 5 given numbers</title>
+	</head>
+	<body>
+		<label for="firstNumber">Enter first number: </label>
+		<input type="text" id="firstNumber">
+		<br />
+		<label for="secondNumber">Enter second number: </label>
+		<input type="text" id="secondNumber">
+		<br/>
+		<label for="thirdNumber">Enter third number: </label>
+		<input type="text" id="thirdNumber">
+		<br />
+		<label for="fourthNumber">Enter fourth number: </label>
+		<input type="text" id="fourthNumber">
+		<br />
+		<label for="fifthNumber">Enter fifth number: </label>
+		<input type="text" id="fifthNumber">
+		<br />
+		<a href="#" onclick="buttonClick()">Check results!</a>
+		<script type="text/javascript">
+			function buttonClick() {
+				var firstNumber = parseInt(document.getElementById("firstNumber").value);
+				var secondNumber = parseInt(document.getElementById("secondNumber").value);
+				var thirdNumber = parseInt(document.getElementById("thirdNumber").value);
+				var fourthNumber = parseInt(document.getElementById("fourthNumber").value);
+				var fifthNumber = parseInt(document.getElementById("fifthNumber").value);
+				
+				if(firstNumber > secondNumber && firstNumber > thirdNumber && firstNumber > fourthNumber && firstNumber > fifthNumber) {
+					document.writeln("The Greatest of 5 numbers is: " + firstNumber);
+				} else if(secondNumber > firstNumber && secondNumber > thirdNumber && secondNumber > fourthNumber && secondNumber > fifthNumber) {
+					document.writeln("The Greatest of 5 numbers is: " + secondNumber);
+				} else if(thirdNumber > firstNumber && thirdNumber > secondNumber && thirdNumber > fourthNumber && thirdNumber > fifthNumber) {
+					document.writeln("The Greatest of 5 numbers is: " + thirdNumber);
+				} else if(fourthNumber > firstNumber && fourthNumber > secondNumber && fourthNumber > thirdNumber && fourthNumber > fifthNumber) {
+					document.writeln("The Greatest of 5 numbers is: " + fourthNumber);
+				} else if(fifthNumber > firstNumber && fifthNumber > secondNumber && fifthNumber > thirdNumber && fifthNumber > fourthNumber) {
+					document.writeln("The Greatest of 5 numbers is: " + fifthNumber);
+				} else {
+					document.writeln("All numbers are equal!");
+				}
+			}
+		</script>
+	</body>
+</html>

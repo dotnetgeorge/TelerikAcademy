@@ -1,0 +1,32 @@
+<!--
+Write an expression that calculates trapezoid's area by given sides a and b and height h.
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Trapezoid Area</title>
+	</head>
+	<body>
+		<label for="firstSide">Enter A: </label>
+		<input type="text" id="firstSide">
+		<br />
+		<label for="secondSide">Enter B: </label>
+		<input type="text" id="secondSide">
+		<br />
+		<label for="height">Enter H: </label>
+		<input type="text" id="height">
+		<br />
+		<a href="#" onclick="buttonClick()">Check results!</a>
+		<script type="text/javascript">
+			function buttonClick() {
+				var firstSide = parseFloat(document.getElementById("firstSide").value);
+				var secondSide = parseFloat(document.getElementById("secondSide").value);
+				var height = parseFloat(document.getElementById("height").value);
+
+				var area = ((firstSide + secondSide) / 2) * height;
+
+				document.writeln("Area : " + area);
+			}
+		</script>
+	</body>
+</html>

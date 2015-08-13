@@ -1,0 +1,16 @@
+body {
+	text-align: center;
+}
+
+#todo-list-component {
+	display: inline-block;
+	text-align: left;
+}
+
+#todo-list {
+	list-style: none;
+}
+
+.hidden {
+	display: none;
+}

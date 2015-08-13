@@ -1,0 +1,42 @@
+<!--
+Sort 3 real values in descending order using nested if statements. 
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Sort 3 number in descending order</title>
+	</head>
+	<body>
+		<label for="firstNumber">Enter first number: </label>
+		<input type="text" id="firstNumber">
+		<br/>
+		<label for="secondNumber">Enter second number: </label>
+		<input type="text" id="secondNumber">
+		<br/>
+		<label for="thirdNumber">Enter third number: </label>
+		<input type="text" id="thirdNumber">
+		<br/>
+		<a href="#" onclick="buttonClick()">Check results!</a>
+		<script type="text/javascript">
+			function buttonClick() {
+				var firstNumber = parseInt(document.getElementById("firstNumber").value);
+				var secondNumber = parseInt(document.getElementById("secondNumber").value);
+				var thirdNumber = parseInt(document.getElementById("thirdNumber").value);
+
+				if(firstNumber < secondNumber) {
+					if(secondNumber < thirdNumber) {
+						document.writeln(firstNumber + "<br/>" + secondNumber + "<br/>" + thirdNumber);
+					} else {
+						document.writeln(firstNumber + "<br/>" + thirdNumber + "<br/>" + secondNumber);
+					}
+				} else {
+					if(firstNumber < thirdNumber) {
+						document.writeln(secondNumber + "<br/>" + firstNumber + "<br/>" + thirdNumber);
+					} else {
+						document.writeln(secondNumber + "<br/>" + thirdNumber + "<br/>" + firstNumber);
+					}
+				}
+			}
+		</script>
+	</body>
+</html>

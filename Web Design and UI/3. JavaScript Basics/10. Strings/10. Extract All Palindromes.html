@@ -1,0 +1,37 @@
+<!--
+Write a program that extracts from a given text all palindromes, e.g. "ABBA", "lamal", "exe". 
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Extract all palindromes</title>
+	</head>
+	<body>
+		<script>
+			function ExtractPolindromes(text) {
+				var array = text.split(" ");
+
+				array.forEach(function(entry) {
+					var sameChar = true;
+
+					for(var i = 0; i < (entry.length / 2); i++) {
+						if(entry[i] != entry[entry.length - 1 - i]) {
+							sameChar = false;
+							break;
+						}
+					}
+
+					if(sameChar && entry.length > 1) {
+						document.writeln(entry + "<br/>");
+					}
+				})
+			}
+
+			var text = new String(prompt("Enter text:"));
+
+			var result = ExtractPolindromes(text);
+
+			document.writeln(result);
+		</script>
+	</body>
+</html>

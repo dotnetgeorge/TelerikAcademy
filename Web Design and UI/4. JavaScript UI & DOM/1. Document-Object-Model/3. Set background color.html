@@ -1,0 +1,21 @@
+<!--
+Crеate a function that gets the value of <input type="color"> and sets the background of the body to this value
+-->
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Set background color</title>
+</head>
+<body>
+	<input type="color">
+	<button onclick="setBackground()" type="submit">Submit</button>
+	<script type="text/javascript">
+		function setBackground() {
+			var color = document.querySelector("input[type=color]").value;
+
+			document.body.style.backgroundColor = color;
+		}
+	</script>
+</body>
+</html>

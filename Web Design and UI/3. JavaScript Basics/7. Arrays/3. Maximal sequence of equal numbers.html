@@ -1,0 +1,40 @@
+<!--
+Write a script that finds the maximal sequence of equal elements in an array.
+		Example: {2, 1, 1, 2, 3, 3, 2, 2, 2, 1} -> {2, 2, 2}.
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Maximal sequence of equal numbers</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var length = parseInt(prompt("Length of array?"));
+
+			var array = new Array(length);
+			var count = 0;
+			var bestCount = 0;
+			var number = 0;
+
+			for(var i = 0; i < array.length; i++) {
+				array[i] = parseInt(prompt("Enter number:"));
+			}
+
+			for(var i = 0; i < array.length - 1; i++) {
+				if(array[i] == array[i + 1]) {
+					count++;
+					if(count > bestCount) {
+						bestCount = count;
+						number = array[i];
+					}
+				} else {
+					count = 0;
+				}
+			}
+
+			for(var i = 0; i <= bestCount; i++) {
+				document.writeln(number + "<br />");
+			}
+		</script>
+	</body>
+</html>

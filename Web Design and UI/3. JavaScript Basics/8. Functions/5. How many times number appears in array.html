@@ -1,0 +1,41 @@
+<!--
+Write a function that counts how many times given number appears in given array. Write a test function to check if the function is working correctly.
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>How many time number appears in array</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function TestCount() {
+				var length = parseInt(prompt("Enter length of array:"));
+				var array = new Array(length);
+
+				for(var i = 0; i < length; i++) {
+					array[i] = parseInt(prompt("Enter number:"));
+				}
+
+				var number = parseInt(prompt("Enter number to count:"));
+
+				var result = Count(array, number);
+
+				document.writeln("Result is: " + result);
+			}
+
+			function Count(array, number) {
+				var count = 0;
+
+				for(var i = 0; i < array.length; i++) {
+					if(array[i] == number) {
+						count++;
+					}
+				}
+
+				return count;
+			}
+
+			TestCount();
+		</script>
+	</body>
+</html>

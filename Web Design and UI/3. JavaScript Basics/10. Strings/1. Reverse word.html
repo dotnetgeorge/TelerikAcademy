@@ -1,0 +1,23 @@
+<!--
+Write a JavaScript function reverses string and returns it
+	Example: "sample" -> "elpmas".
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Reverse word</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var word = new String(prompt("Enter word:"));
+
+			ReverseWord(word);
+
+			function ReverseWord(word) {
+				var reversed  = new String(word.split("").reverse().join(""));
+
+				document.writeln(reversed);
+			}
+		</script>
+	</body>
+</html>

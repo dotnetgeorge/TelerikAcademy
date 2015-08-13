@@ -1,0 +1,41 @@
+<!-- 
+Write a program that finds the most frequent number in an array. Example:
+	{4, 1, 1, 4, 2, 3, 4, 4, 1, 2, 4, 9, 3} -> 4 (5 times)
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Most frequent number in array</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var length = parseInt(prompt("Enter length of array:"));
+
+			var array = new Array(length);
+
+			var count = 0;
+			var bestCount = 0;
+			var number = 0;
+
+			for(var i = 0; i < length; i++) {
+				array[i] = parseInt(prompt("Enter number: "));
+			}
+
+			array.sort(function(first, second) {return first-second});
+
+			for(var i = 0; i < array.length - 1; i++) {
+				if(array[i] == array[i + 1]) {
+					count++;
+					if(count > bestCount) {
+						bestCount = count;
+						number = array[i];
+					} else {
+						count = 0;
+					}
+				}
+			}
+
+			document.writeln(number + "(" + bestCount + " times)");
+		</script>
+	</body>
+</html>

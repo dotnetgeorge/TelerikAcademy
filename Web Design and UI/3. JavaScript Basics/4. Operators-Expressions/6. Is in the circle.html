@@ -1,0 +1,30 @@
+<!--
+Write an expression that checks if given print (x,  y) is within a circle K(O, 5). 
+-->
+<!DOCTYPE html>
+<html>
+	 <head>
+		 <title>Rectangle area</title>
+	 </head>
+	 <body>
+	 	 <label for="numberX">Enter X: </label>
+	 	 <input type="text" id="numberX"/>
+	 	 <br />
+	 	 <label for="numberY">Enter Y: </label>
+	 	 <input type="text" id="numberY">
+	 	 <br />
+	 	 <a href="#" onclick="buttonClick()">Check Results!</a>
+	 	 <script>
+	 	 		function buttonClick() {
+	 	 			var numberX = parseFloat(document.getElementById("numberX").value);
+	 	 			var numberY = parseFloat(document.getElementById("numberY").value);
+
+	 	 			if((numberX >= 0 && numberX <= 5) && (numberY >= 0 && numberY <= 5)) {
+	 	 				document.writeln("Print is in the circle!");
+	 	 			} else {
+	 	 				document.writeln("Print isn't in the circle!");
+	 	 			}
+	 	 		}
+	 	 </script>
+	 </body>
+</html>

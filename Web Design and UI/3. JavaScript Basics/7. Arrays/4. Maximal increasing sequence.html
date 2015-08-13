@@ -1,0 +1,53 @@
+<!-- 
+Write a script that finds the maximal increasing sequence in an array. Example: 
+	{3, 2, 3, 4, 2, 2, 4} -> {2, 3, 4}.
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Maximal increasing sequence</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var length = parseInt(prompt("Enter length of array:"));
+
+			var array = new Array(length);
+
+			var count = 0;
+			var bestCount = 0;
+			var numbers = new Array();
+			var index = 0;
+
+			for(var i = 0; i < length; i++) {
+				array[i] = parseInt(prompt("Enter number: "));
+			}
+
+			document.writeln(MaxIncreasing(array));
+			
+			function MaxIncreasing(array) {
+				var length = 0;
+				var max = 0;
+				var current = 0;
+
+				for(var i = 0; i < array.length; i++) {
+					if(array[i] > array[i - 1]) {
+						if(i - current + 1 > length) {
+							max = current;
+							length = i - current + 1;
+						}
+					} else {
+						current = i;
+					}
+				}
+
+				var result = "{"
+				for(var i = max; i < length; i++) {
+					result += array[i] + ", ";
+				}
+				result += array[length] + "}";
+				return result;
+			}
+
+		</script>
+	</body>
+</html>

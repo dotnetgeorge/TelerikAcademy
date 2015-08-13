@@ -1,0 +1,36 @@
+<!--
+Write an expression that checks if given positive integer number n (n ≤ 100) is prime. E.g. 37 is prime. 
+-->
+<!DOCTYPE html>
+<html>
+	 <head>
+		 <title>Rectangle area</title>
+		 <link href="styles/js-console.css" rel="stylesheet"/>
+	 </head>
+	 <body>
+	 	 <label for="number">Enter Number: </label>
+	 	 <input type="text" id="number"/>
+	 	 <br />
+	 	 <a href="#" onclick="buttonClick()">Check Results!</a>
+	 	 <script>
+	 	 		function buttonClick() {
+	 	 			var number = parseInt(document.getElementById("number").value);
+	 	 			
+	 	 			var loopEnd = parseInt(Math.sqrt(number));
+
+	 	 			var result = true;
+	 	 			var count = 2;
+
+	 	 			while(loopEnd >= count) {
+	 	 				if(number % count == 0) {
+	 	 					result = false;
+	 	 					break;
+	 	 				}
+	 	 				count++;
+	 	 			}
+
+	 	 			document.writeln(result ? "Prime" : "Not Prime");
+	 	 		}
+	 	 </script>
+	 </body>
+</html>

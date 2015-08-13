@@ -1,0 +1,25 @@
+<!--
+Write a function that replaces non breaking white-spaces in a text with &nbsp;
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Replace nbsp in text</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function ReplaceNBSP(text) {
+				var regex = /[\s|\u00A0]/;
+				var result = text.replace(regex, '&nbsp;');
+
+				return result;
+			}
+
+			var text = new String(prompt("Enter text:"));
+
+			var result = ReplaceNBSP(text);
+
+			document.writeln(result);
+		</script>
+	</body>
+</html>

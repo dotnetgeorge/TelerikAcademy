@@ -1,0 +1,56 @@
+<!--
+Write script that asks for a digit and depending on the input shows the name of that digit (in English) using a switch statement.
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Name of the digit</title>
+	</head>
+	<body>
+		<label for="digit">Enter digit: </label>
+		<input type="text" id="digit">
+		<br/>
+		<a href="#" onclick="buttonClick()">Check results!</a>
+		<script type="text/javascript">
+			function buttonClick() {
+				var digit = parseInt(document.getElementById("digit").value);
+
+				switch(digit) {
+					case 0:
+						document.writeln("Zero");
+						break;
+					case 1:
+						document.writeln("One");
+						break;
+					case 2:
+						document.writeln("Two");
+						break;
+					case 3:
+						document.writeln("Three");
+						break;
+					case 4:
+						document.writeln("Four");
+						break;
+					case 5:
+						document.writeln("Five");
+						break;
+					case 6:
+						document.writeln("Six");
+						break;
+					case 7:
+						document.writeln("Seven");
+						break;
+					case 8:
+						document.writeln("Eight");
+						break;
+					case 9:
+						document.writeln("Nine");
+						break;
+					default:
+						document.writeln("WRONG!!! You must enter single digit!");
+						break;
+				}
+			}
+		</script>
+	</body>
+</html>

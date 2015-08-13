@@ -1,0 +1,35 @@
+<!-- 
+Sorting an array means to arrange its elements in increasing order. Write a script to sort an array. Use the "selection sort" algorithm: Find the smallest element, move it at the first position, find the smallest from the rest, move it at the second position, etc.
+	Hint: Use a second array
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Selection Sort</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var length = parseInt(prompt("Enter length of array:"));
+
+			var array = new Array(length);
+
+			for(var i = 0; i < length; i++) {
+				array[i] = parseInt(prompt("Enter number: "));
+			}
+
+			for(var i = 0; i < length - 1; i++) {
+				for(var j = i + 1; j < length; j++) {
+					if(array[i] > array[j]) {
+						var tmp = array[i];
+						array[i] = array[j];
+						array[j] = tmp;
+					}
+				}
+			}
+
+			for(var i = 0; i < length; i++) {
+				document.writeln(array[i] + " ");
+			}
+		</script>
+	</body>
+</html>

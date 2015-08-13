@@ -1,0 +1,34 @@
+<!-- 
+Write a JavaScript function that replaces in a HTML document given as string all the tags <a href="…">…</a> with corresponding tags [URL=…]…/URL]. Sample HTML fragment:
+	<p>Please visit <a href="http://academy.telerik. com">our site</a> to choose a training course. Also visit <a href="www.devbg.org">our forum</a> to discuss the courses.</p>
+Result:
+	<p>Please visit [URL=http://academy.telerik. com]our site[/URL] to choose a training course. Also visit [URL=www.devbg.org]our forum[/URL] to discuss the courses.</p>
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Replace A tag</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function ReplaceTag(html) {
+				var leftSide = new RegExp("<a href=\"", "g");
+				html = html.replace(leftSide, "[URL=");
+
+				var rightSide = new RegExp("\">", "g");
+				html = html.replace(rightSide, "]");
+
+				var closeTag = new RegExp("</a>", "g");
+				html = html.replace(closeTag, "[/URL]");
+
+				return html;
+			}
+
+			var html = new String(prompt("Enter html document:"));
+
+			var result = ReplaceTag(html);
+
+			document.writeln(result);
+		</script>
+	</body>
+</html>

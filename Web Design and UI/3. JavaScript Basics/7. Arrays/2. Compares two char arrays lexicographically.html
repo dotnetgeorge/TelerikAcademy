@@ -1,0 +1,41 @@
+<!-- 
+Write a script that compares two char arrays lexicographically (letter by letter).
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Compares two char arrays lexicographically</title>
+	</head>
+	<body>
+		<label for="firstWord">Enter first word: </label>
+		<input type="text" id="firstWord">
+		<br />
+		<label for="secondWord">Enter second word: </label>
+		<input type="text" id="secondWord">
+		<br />
+		<a href="#" onclick="buttonClick()">Check results!</a>
+		<script type="text/javascript">
+			function buttonClick() {
+				var firstWord = document.getElementById("firstWord").value;
+				var secondWord = document.getElementById("secondWord").value;
+
+				var first = 0;
+				var second = 0;
+
+				for(var i = 0; i < firstWord.length; i++) {
+					first += firstWord.charCodeAt(i);
+				}
+
+				for(var i = 0; i < secondWord.length; i++) {
+					second += secondWord.charCodeAt(i);
+				}
+
+				if(first == second) {
+					document.writeln("Arrays are with same characters.");
+				} else {
+					document.writeln(first < second ? "First array is near lexicographycall." : "Second array is near lexicographycall.");
+				}
+			}
+		</script>
+	</body>
+</html>

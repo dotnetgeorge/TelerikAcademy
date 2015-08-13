@@ -1,0 +1,50 @@
+<!--
+Write a function that checks if the element at given position 
+in given array of integers is bigger than its two neighbors (when such exist). 
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>If element is bigger than its two neighbors</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var length = parseInt(prompt("Enter length of array:"));
+			var array = new Array(length);
+
+			for(var i = 0; i < length; i++) {
+				array[i] = parseInt(prompt("Enter number:"));
+			}
+
+			var index = parseInt(prompt("Enter index of element:"));
+
+			IsBigger(array, index);
+
+			function IsBigger(array, index) {
+				if(index == 0) {
+					if(array[index] > array[index + 1]) {
+						document.writeln("It is bigger!");
+					} else {
+						document.writeln("It is not bigger!");
+					}
+				} else if(index == array.length - 1) {
+					if(array[index] > array[index - 1]) {
+						document.writeln("It is bigger!");
+					} else {
+						document.writeln("It is not bigger!");
+					}
+				} else {
+					if(array[index] > array[index - 1] && array[index] > array[index + 1]) {
+						document.writeln("Bigger by the both sides.");
+					} else if(array[index] > array[index - 1] && array[index] < array[index + 1]) {
+						document.writeln("Bigger by the left side and smaller by the right side.");
+					} else if(array[index] < array[index - 1] && array[index] > array[index + 1]) {
+						document.writeln("Bigger by the right side and smaller by the left side.");
+					} else {
+						document.writeln("Smaller by the both sides!");
+					}
+				}
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,57 @@
+<!-- 
+Write a function that returns the last digit of given integer as an English word. 
+	Examples: 512 -> "two", 1024 -> "four", 12309 -> "nine"
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Last digit in English</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var number = parseInt(prompt("Enter number: "));
+
+			DigitInEnglish(number);
+
+			function DigitInEnglish(number) {
+				var digit = number % 10;
+
+				switch(digit) {
+					case 0:
+						document.writeln("Zero");
+						break;
+					case 1:
+						document.writeln("One");
+						break;
+					case 2:
+						document.writeln("Two");
+						break;
+					case 3:
+						document.writeln("Three");
+						break;
+					case 4:
+						document.writeln("Four");
+						break;
+					case 5:
+						document.writeln("Five");
+						break;
+					case 6:
+						document.writeln("Six");
+						break;
+					case 7:
+						document.writeln("Seven");
+						break;
+					case 8:
+						document.writeln("Eight");
+						break;
+					case 9:
+						document.writeln("Nine");
+						break;
+					default:
+						document.writeln("WRONG!!!");
+						break;
+				}
+			}
+		</script>
+	</body>
+</html>

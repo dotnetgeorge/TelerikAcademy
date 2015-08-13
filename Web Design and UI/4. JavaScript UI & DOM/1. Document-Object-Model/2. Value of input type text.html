@@ -1,0 +1,32 @@
+<!--
+Create a function that gets the value of <input type="text"> ands prints its value to the console
+-->
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Value of input type text</title>
+</head>
+<body>
+
+	<input type="text" value="software engineer">sgsdg
+	<input type="text" value="software engineer">dsgcn
+	<input type="text" value="software engineer">cbnnb,m
+	<input type="text" value="software engineer">m,nm,
+	<input type="password" value="software engineer">bnnb
+
+	<script>
+		function getValueOfInput() {
+			var input = document.querySelectorAll("input[type=text]");
+
+			for(var i = 0, len = input.length; i < len; i += 1) {
+				document.write(input[i].value);
+				document.write("<br/>");
+			}
+		}
+
+		document.write("<br/>");
+		getValueOfInput();
+	</script>
+</body>
+</html>

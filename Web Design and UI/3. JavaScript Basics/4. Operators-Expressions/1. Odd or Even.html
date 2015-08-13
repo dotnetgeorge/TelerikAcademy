@@ -1,0 +1,26 @@
+<!-- 
+Write an expression that checks if given integer is odd or even.
+-->
+<!DOCTYPE html>
+<html>
+	 <head>
+		 <title>Odd or Even</title>
+	 </head>
+	 <body>
+		 <label for="number">Enter number: </label>
+		 <input type="text" id="number"/>
+		 <br />
+		 <a href="#" onclick="buttonClick()">Check number</a>
+		 <script>
+			 function buttonClick() {
+				 var number = parseInt(document.getElementById("number").value);
+				
+				 if(number % 2 == 0) {
+					 document.writeln("The number is even!");
+				 } else {
+					 document.writeln("The number is odd!");
+				 }
+			 }
+		 </script>
+	 </body>
+</html>

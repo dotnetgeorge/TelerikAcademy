@@ -1,0 +1,22 @@
+<!-- 
+Write an expression that checks for given integer if its third digit (right-to-left) is 7. E. g. 1732 -> true.
+-->
+<!DOCTYPE html>
+<html>
+	 <head>
+		 <title>Rectangle area</title>
+	 </head>
+	 <body>
+	 	 <label for="number">Enter number: </label>
+	 	 <input type="text" id="number"/>
+	 	 <br />
+	 	 <a href="#" onclick="buttonClick()">Check Results!</a>
+	 	 <script>
+	 	 		function buttonClick() {
+	 	 			var number = parseFloat(document.getElementById("number").value);
+
+	 	 			document.writeln(((number / 100) % 10 == 7) ? "Third digit is 7!" : "Third digit isn't 7!");
+	 	 		}
+	 	 </script>
+	 </body>
+</html>

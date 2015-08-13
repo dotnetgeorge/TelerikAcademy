@@ -1,0 +1,60 @@
+<!--
+Write a script that enters the coefficients a, b and c of a quadratic equation
+		a*x2 + b*x + c = 0
+and calculates and prints its real roots. Note that quadratic equations may have 0, 1 or 2 real roots. 
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Quadratic Equation</title>
+	</head>
+	<body>
+		<label for="firstSide">Enter A: </label>
+		<input type="text" id="firstSide">
+		<br />
+		<label for="secondSide">Enter B: </label>
+		<input type="text" id="secondSide">
+		<br />
+		<label for="thirdSide">Enter C: </label>
+		<input type="text" id="thirdSide">
+		<br />
+		<a href="#" onclick="buttonClick()">Check Results!</a>
+		<script type="text/javascript">
+			function buttonClick() {
+				var firstSide = parseInt(document.getElementById("firstSide").value);
+				var secondSide = parseInt(document.getElementById("secondSide").value);
+				var thirdSide = parseInt(document.getElementById("thirdSide").value);
+				var x, firstX, secondX, d;
+
+				if(firstSide == 0) {
+					if(secondSide == 0) {
+						if(thirdSide == 0) {
+							document.writeln("Every X is solution!");
+						} else {
+							document.writeln("No Solution!");
+						}
+					} else {
+						x = (-thirdSide) / secondSide;
+						document.writeln("X = " + x); 
+					}
+				} else {
+					d = (secondSide * secondSide) - (4 * firstSide * thirdSide);
+
+					if(d > 0) {
+						firstX = (-secondSide + Math.sqrt(d)) / (2 * firstSide);
+						secondX = (-secondSide - Math.sqrt(d)) / (2 * firstSide);
+						document.writeln("First X = " + firstX);
+						document.writeln("Second X = " + secondX);
+					} else {
+						if(d == 0) {
+							x = (-secondSide) / (2 * firstSide);
+							document.writeln("X = " + x);
+						} else {
+							document.writeln("No Real Roots!");
+						}
+					}
+				}
+			}
+		</script>
+	</body>
+</html>

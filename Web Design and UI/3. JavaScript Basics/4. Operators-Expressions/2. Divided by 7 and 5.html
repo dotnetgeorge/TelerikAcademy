@@ -1,0 +1,25 @@
+<!--
+Write a boolean expression that checks for given integer if it can be divided (without remainder) by 7 and 5 in the same time. 
+-->
+<!DOCTYPE>
+<html>
+	 <head>
+		 <title>Divided by 7 and 5</title>
+	 </head>
+	 <body>
+		 <label for="number">Enter Number: </label>
+		 <input type="text" id="number"/>
+		 <br>
+		 <a href="#" onclick="buttonClick()">Check result.</a>
+		 </script>
+		 <script>
+			 function buttonClick() {
+				 var number = parseInt(document.getElementById("number").value);
+				 
+				 var result = (((number / 7) == 0) && ((number / 5) == 0 ));
+				 
+				 document.writeln(result);
+			 }
+		 </script>
+	 </body>
+</html>

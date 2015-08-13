@@ -1,0 +1,40 @@
+<!-- 
+Write a script that parses an URL address given in the format:
+	[protocol]://[server]/[resource]
+and extracts from it the [protocol], [server] and [resource] elements. 
+Return the elements in a JSON object.
+	For example from the URL http://www.devbg.org/forum/index.php the following information should be extracted:
+	{protocol: "http",
+	 server: "www.devbg.org", 
+	 resource: "/forum/index.php"}
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Parse URL address</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function ParseURL(urlAddress) {
+				var indexProtocol = urlAddress.indexOf("://");
+				var protocol = urlAddress.substring(0, indexProtocol);
+
+				var indexServer = urlAddress.indexOf("/", indexProtocol + 3);
+				var serverLength = (indexServer - 1) - (indexProtocol + 2);
+				var server = urlAddress.substr(indexProtocol + 3, serverLength);
+
+				var resource = urlAddress.substr(indexServer);
+
+				document.write("{protocol: \"" + protocol + "\",<br/>");
+				document.write("server: \"" + server + "\",<br/>");
+				document.write("resource: \"" + resource + "\"}<br/>");
+			}
+
+			var urlAddress = new String(prompt("Enter URL Address:"));
+
+			var result = ParseURL(urlAddress);
+
+			document.writeln(result);
+		</script>
+	</body>
+</html>

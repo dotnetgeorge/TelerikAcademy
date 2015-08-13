@@ -1,0 +1,25 @@
+<!--
+Write a script that prints all the numbers from 1 to N 
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Print 1 to N</title>
+	</head>
+	<body>
+		<label for="number">Enter N: </label>
+		<input type="text" id="number" onblur="buttonClick()"/>
+		<br />
+		<a href="#" onclick="buttonClick()">Check result!</a>
+		<script type="text/javascript">
+			function buttonClick() {
+				var number = parseInt(document.getElementById("number").value);
+
+				for (var i = 1; i <= number; i++) {
+					document.write(i);
+					document.write("<br />");
+				};
+			}
+		</script>
+	</body>
+</html>

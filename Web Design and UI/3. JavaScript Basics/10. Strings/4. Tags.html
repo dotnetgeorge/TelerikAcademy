@@ -1,0 +1,67 @@
+<!-- 
+You are given a text. Write a function that changes the text in all regions:
+	<upcase>text</upcase> to uppercase.
+	<lowcase>text</lowcase> to lowercase
+	<mixcase>text</mixcase> to mix casing(random)
+	We are <mixcase>living</mixcase> in a <upcase>yellow submarine</upcase>. We <mixcase>don't</mixcase> have <lowcase>anything</lowcase> else.
+The expected result:
+	We are LiVinG in a YELLOW SUBMARINE. We dOn'T have anything else.
+Regions can be nested
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Tags</title>
+	</head>
+	<body>
+		<label for="text">Enter text with tags</label>
+		<textarea id="text"></textarea>
+		<a href="#" onclick="buttonClick()">Check results!</a>
+		<script type="text/javascript">
+			function ConvertTags(text) {
+				var indexStartUpperCase = text.indexOf("<upcase>");
+				while(indexStartUpperCase != -1) {
+					var upperCaseInsideText = text.substring(indexStartUpperCase + 8, text.indexOf("</upcase>", indexStartUpperCase));
+					var upperCaseText = upperCaseInsideText.toUpperCase();
+
+					text = text.replace(upperCaseInsideText, upperCaseText);
+					indexStartUpperCase = text.indexOf("<upcase>", indexStartUpperCase + 1);
+				}
+
+				var indexStartLower = text.indexOf("<lowcase>");
+				while(indexStartLower != -1) {
+					var lowerCaseInsideText = text.substring(indexStartLower + 9, text.indexOf("</lowcase>"), indexStartLower);
+					var lowerCaseText = lowerCaseInsideText.toLowerCase();
+
+					text = text.replace(lowerCaseInsideText, lowerCaseText);
+					indexStartLower = text.indexOf("<lowcase>", indexStartLower + 1);
+				}
+
+				var indexStartMixCase = text.indexOf("<mixcase>");
+				while(indexStartMixCase != -1) {
+					var mixCaseInsideText = text.substring(indexStartMixCase + 9, text.indexOf("</mixcase>", indexStartMixCase);
+					var mixCaseText = new String(mixCaseInsideText);
+
+					for(var i = 0; i < mixCaseText.length; i++) {
+						if((i % 2) == 0) {
+							mixCaseText = mixCaseText.replace(mixCaseText[i], mixCaseText[i].toUpperCase());
+						} else {
+							mixCaseText = mixCaseText.replace(mixCaseText[i], mixCaseText[i].toLowerCase());
+						}
+					}
+
+					text = text.replace(mixCaseInsideText, mixCaseText);
+					indexStartMixCase = text.indexOf("<mixcase>", indexStartMixCase + 1);
+				}
+
+				return text;
+			}
+
+			var text = prompt("Enter text:");
+
+			var result = ConvertTags(text);
+
+			document.writeln(result);
+		</script>
+	</body>
+</html>

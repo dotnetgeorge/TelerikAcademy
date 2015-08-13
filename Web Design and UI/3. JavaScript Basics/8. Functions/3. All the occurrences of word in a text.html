@@ -1,0 +1,49 @@
+<!--
+Write a function that finds all the occurrences of word in a text
+The search can case sensitive or case insensitive
+Use function overloading
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>All the occurrences of word in a text</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var text = new String(prompt("Enter text: "));
+			var word = new String(prompt("Enter word to find:"));
+
+			SearchCaseSensitive(text, word);
+			SearchCaseInsensitive(text, word);
+
+			function SearchCaseSensitive(text, word) {
+				var index = text.indexOf(word);
+				var count = 0;
+
+				while(index != -1) {
+					count++;
+					index = text.indexOf(word, index + 1);
+				}
+
+				document.writeln("Case Sensitive Search<br />");
+				document.writeln("Word find " + count + " times in text!<br />");
+			}
+
+			function SearchCaseInsensitive(text, word) {
+				text = text.toLowerCase();
+				word = word.toLowerCase();
+
+				var index = text.indexOf(word);
+				var count = 0;
+
+				while(index != -1) {
+					count++;
+					index = text.indexOf(word, index + 1);
+				}
+
+				document.writeln("Case Insensitive Search<br />");
+				document.writeln("Word find " + count + " times in text!<br />");
+			}
+		</script>
+	</body>
+</html>

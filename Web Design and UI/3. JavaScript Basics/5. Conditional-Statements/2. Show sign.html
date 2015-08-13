@@ -1,0 +1,26 @@
+<!--
+Write a script that shows the sign (+ or -) of the product of three real numbers without calculating it. Use a sequence of if statements.
+-->
+<!DOCTYPE html>
+<html>
+	 <head>
+		 <title>Show sign</title>
+	 </head>
+	 <body>
+		<label for="number">Enter Number: </label>
+	 	<input type="text" id="number">
+	 	<br />
+	 	<a href="#" onclick="buttonClick()">Check result!</a>
+		<script>
+			 function buttonClick() {
+			 		var number = parseInt(document.getElementById("number").value);
+
+		 			if(number > 0) {
+		 				document.writeln("+" + number);
+		 			} else {
+		 				document.writeln(number);
+		 			}
+		 		}
+		 </script>
+	 </body>
+</html>

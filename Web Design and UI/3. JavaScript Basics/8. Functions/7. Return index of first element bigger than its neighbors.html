@@ -1,0 +1,35 @@
+<!--
+Write a function that returns the index of the first element in array that is bigger than its neighbors, or -1, if there’s no such element
+Use the function from the previous exercise. 
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Return index of first element bigger than its neighbors</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			var length = parseInt(prompt("Enter length of array:"));
+			var array = new Array(length);
+
+			for(var i = 0; i < length; i++) {
+				array[i] = parseInt(prompt("Enter number:"));
+			}
+
+			var position = FirstBiggerElement(array);
+
+			document.writeln("First element who is bigger than its neighbors is at index: " + position);
+
+			function FirstBiggerElement(array) {
+				for(var i = 1; i < array.length - 1; i++) {
+					if(array[i - 1] < array[i] && array[i] > array[i + 1]) {
+						return i;
+						break;
+					}
+				}
+
+				return -1;
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,28 @@
+<!--
+	Write a boolean expression for finding if the bit 3 (counting from 0) of a given integer is 1 or 0.
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Bit 3 is 1 or 0</title>
+	</head>
+	<body>
+		<label for="number">Enter number: </label>
+		<input type="text" id="number">
+		<br />
+		<a href="#" onclick="buttonClick()">Check Results!</a>
+		<script type="text/javascript">
+			function buttonClick() {
+				var number = parseInt(document.getElementById("number").value);
+
+				number = number & 8;
+
+				if(number == 8) {
+					document.writeln("1");
+				} else {
+					document.writeln("0");
+				}
+			}
+		</script>
+	</body>
+</html>

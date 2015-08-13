@@ -1,0 +1,54 @@
+<!--
+Write a script that selects all the div nodes that are directly inside other div elements
+	Create a function using querySelectorAll()
+	Create a function using getElementsByTagName()
+-->
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Get divs inside divs</title>
+</head>
+<body>
+	<div>
+		<div>sgfksl;djgflksdjglkdsgjsdl;g</div>
+		<div>sdgsdggg</div>
+		<div>4353443543543534543543345</div>
+		<div>cvbcvbcvbvcbcvbcvbcvbcb</div>
+		<div>hyjukhkhjkhkhjkhjkhk</div>
+		<span>sdaewrwer</span>
+	</div>
+
+	<script type="text/javascript">
+		function getDivsWithQuery() {
+			var divs = document.querySelectorAll("div div");
+
+			for(var i = 0, len = divs.length; i < len; i+=1) {
+				document.write(divs[i]);
+				document.write("<br/>");
+				document.write(divs[i].innerHTML);
+				document.write("<br/>");
+			}
+		}
+
+		function getDivsWithTag() {
+			var divElement = document.getElementsByTagName("div");
+			var divElements = divElement[0].getElementsByTagName("div");
+
+			for(var i = 0, len = divElements.length; i < len; i+=1) {
+
+				document.write(divElements[i]);
+				document.write("<br/>");
+				document.write(divElements[i].innerHTML);
+				document.write("<br/>");
+			}
+		}
+
+		document.write("<br/> Get all div nodes with querySelectorAll():<br/>");
+		getDivsWithQuery();
+		
+		document.write("<br/> Get all div nodes with getElementsByTagName():<br/>");
+		getDivsWithTag();
+	</script>
+</body>
+</html>

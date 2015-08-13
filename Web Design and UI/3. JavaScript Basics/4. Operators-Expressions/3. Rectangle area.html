@@ -1,0 +1,28 @@
+<!--
+Write an expression that calculates rectangle’s area by given width and height. 
+-->
+<!DOCTYPE html>
+<html>
+	 <head>
+		 <title>Rectangle area</title>
+	 </head>
+	 <body>
+	 	 <label for="width">Width: </label>
+	 	 <input type="text" id="width"/>
+	 	 <br />
+	 	 <label for="height">Height: </label>
+	 	 <input type="text" id="height"/>
+	 	 <br>
+	 	 <a href="#" onclick="buttonClick()"> Check Results!</a>
+	 	 <script>
+	 	 		function buttonClick() {
+	 	 			var width = parseFloat(document.getElementById("width").value);
+	 	 			var height = parseFloat(document.getElementById("height").value);
+
+	 	 			var area = width * height;
+
+	 	 			document.writeln("Rectangle area is: " + area);
+	 	 		}
+	 	 </script>
+	 </body>
+</html>

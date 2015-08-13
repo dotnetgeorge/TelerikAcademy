@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style>
+		* {
+		  box-sizing: border-box;
+		}
+
+		textarea {
+		  display: block;
+		  width: 90%;
+		}
+
+		.tag {
+		  margin: 5px;
+		}
+
+		.tag:hover {
+		  text-decoration: underline;
+		}
+	</style>
+</head>
+<body>
+	<h1>Generate tag cloud</h1>
+
+  <form>
+    <fieldset>
+      <label>
+        Tags
+        <textarea id="tag-input" rows="5" >javascript JavaScript HTML HTML5 CSS CSS3 ecmascript ECMAScript EcmaScript "HTML5 rocks"</textarea>
+      </label>
+    </fieldset>
+
+    <button type="submit" >Generate</button>
+
+    <fieldset>
+      <legend>Font Size</legend>
+
+      <label>
+        Min Font Size
+        <input type="range" id="min-font-size" min="8" max="16" />
+      </label>
+
+      <label>
+        Max Font Size
+        <input type="range" id="max-font-size" min="16" max="32" />
+      </label>
+
+    </fieldset>
+  </form>
+
+  <output></output>
+
+  <script src="scripts/tag-cloud.js"></script>
+</body>
+</html>

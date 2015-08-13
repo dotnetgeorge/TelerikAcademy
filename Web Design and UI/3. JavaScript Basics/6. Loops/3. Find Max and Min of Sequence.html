@@ -1,0 +1,35 @@
+<!--
+Write a script that finds the max and min number from a sequence of numbers 
+-->
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Find Max and Min of sequence of numbers</title>
+	</head>
+	<body>
+		<label for="number">Enter Number: </label>
+		<input type="text" id="number">
+		<br />
+		<a href="#" onclick="buttonClick()">Check result!</a>
+		<script type="text/javascript">
+			function buttonClick() {
+				var number = parseInt(document.getElementById("number").value);
+
+				var min = Number.MAX_VALUE;
+				var max = Number.MIN_VALUE;
+
+				for(var i = 0; i < number; i++) {
+					var tmp = prompt("Enter number:");
+					if(tmp > max) {
+						max = tmp;
+					}
+					if(tmp < min) {
+						min = tmp;
+					}
+				}
+				document.writeln("Max is: " + max);
+				document.writeln("Min is: " + min);
+			}
+		</script>
+	</body>
+</html>
